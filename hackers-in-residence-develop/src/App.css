@@ -1,0 +1,235 @@
+a {
+  text-decoration: none;
+  color: initial;
+}
+.top-header{
+  box-shadow: 0 2px 5px 0 #00000000;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: rgb(218, 218, 218);
+
+}
+
+.top-header .back-icon {
+  background: none;
+  border: none;
+  color: #e2dabd;
+  cursor: pointer;
+  font-size: 22px;
+  outline: none;
+  max-height: var(--header-height);
+  max-width: 48px;
+  width: 48px;
+}
+
+.top-header .brand-logo{
+  max-height: calc(var(--header-height) - 5px);
+}
+
+/* .home-list{
+  display: block;
+  background-color: #171616;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 #00000026, 0 2px 10px 0 #0000001f;
+  box-sizing: border-box;
+  padding: 10px;
+  max-width: 550px;
+  margin: 0px auto 22px auto;
+  border-radius: 3px;
+  color: var(--theme-color);
+  font-size: 15px;
+} */
+
+main{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: calc(var(--header-height) + 10px);
+  max-width: 550px;
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.cards *{
+  font-size: 13px;
+}
+
+.cards .card{
+  display: inline-flex;
+  max-width: calc(50% - 40px);
+  border-radius: 10px;
+  background: rgb(182, 221, 250);
+  box-shadow: 0 4px 6px 0px #ffffff1f, 0px 1px 5px 0px #00000029;
+  padding: 10px;
+  margin: 10px;
+  flex-flow: row wrap;
+  align-items: center;
+  transition: .6s;
+  cursor: pointer;
+  justify-content: space-around;
+}
+.cards .card:hover{
+  box-shadow: 0 8px 6px 2px #0000001f, 0px 1px 5px 0px #00000029;
+}
+
+.cards .card .card-img{
+  max-width: 30%;
+}
+
+.cards .card .card-info{
+  width: 60%;
+  height: 100%;
+}
+
+.cards .card .card-info h2{
+  color: #333;
+}
+
+.cards .card .card-info p {
+  color: #4e4e4e;
+  font-size: 12px;
+  text-align: justify;
+}
+.page-title{
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(75, 75, 75);
+  margin: 20 auto;
+  text-align: center;
+}
+.contacts-list{
+  display: flex;
+  flex-direction: column;
+}
+.contacts-list .contact-number{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid hsla(0,0%,91%,.7);
+  color: #0e3c3c;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 5px;
+  transition: .6s;
+  border-radius: 6px;
+  font-size: 13px;
+  background-color: rgb(211, 217, 220);
+}
+.contacts-list .contact-number:focus, .contacts-list .contact-number:hover{
+  background: gray;
+  color: var(--theme-color);
+  border-radius: 6px;
+}
+.contacts-list .contact-number:focus{
+  background: hsla(0,0%,75%,.2);
+  color: var(--theme-color);
+  border-radius: 6px;
+}
+.contacts-list .contact-number .name{
+  font-weight: 600;
+  opacity: .91;
+}
+/* MSC */
+input:not(.swal2-input), textarea, input:not(.swal2-select), select:not(.swal2-select){
+  border: none;
+  box-shadow: 0 0 0 2px rgb(0 0 0 / 15%);
+  height: 20px;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: 0.6s;
+}
+textarea{
+  box-shadow: 0 0 0 2px rgb(0 0 0 / 15%);
+  outline: none;
+}
+select:not(.swal2-select){
+  height: 40px;
+  background: white;
+  font-size: 14px;
+}
+input:not(.swal2-select):focus, textarea:not(.swal2-select):focus {
+  box-shadow: 0 0 0 3px rgba(var(--theme-color-coords),.2);
+}
+label{
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  background-color: rgb(150, 208, 218);
+}
+.btn{
+  background:  rgb(0, 112, 210);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: .6s;
+  outline: none;
+}
+.btn:hover{
+  box-shadow: 0 0 0 3px rgba(var(--theme-color-coords),.2);
+}
+.btn:focus{
+  box-shadow: 0 0 0 3px rgba(var(--theme-color-coords),.5);
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  .cards .card{
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-around;
+  }
+  .cards .card .card-img {
+    max-width: 48px;
+  }
+  .cards .card .card-info{
+    text-align: left;
+    width: 70%;
+  }
+  .cards .card .card-info h2{
+    font-size: 16px;
+  }
+  .cards .card .card-info p{
+    text-align: left;
+  }
+  label{
+    margin-bottom: 20px;
+    position: relative;
+  }
+  input[type="date"], input[type="time"]{
+    background: #fff !important;
+    display: flex;
+    width: 94%;
+    color: #333;
+  }
+  input[type="date"]::placeholder, input[type="time"]::placeholder{
+    color: #333;
+    counter-reset: all;
+  }
+  input[type="date"]::after, input[type="time"]::after{
+    color: #333;
+    display: block;
+  }
+}
