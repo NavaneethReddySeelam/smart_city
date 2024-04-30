@@ -6,7 +6,7 @@ import User from "./model/authmodel.js"
 const app = Express()
 app.use(cors())
 app.use(Express.json())
-mongoose.connect("mongodb+srv://2200039025:NavaNeeth%40123@cluster0.fgyz2fs.mongodb.net/sdp")
+mongoose.connect("mongodb+srv://NikileshReddyT:Nikki%402005@cluster0.en4mm4h.mongodb.net/sdp")
 
 app.post("/signup",async(req,res)=>{
     const {name,email,password} = req.body
